@@ -1,3 +1,6 @@
+import java.math.BigDecimal;
+import java.math.BigInteger;
+
 public class Java_2 {
     public static void main(String[] args) {
         
@@ -84,5 +87,16 @@ public class Java_2 {
         System.out.println("myString = " + myString);
         System.out.println("\n");
         
+        BigDecimal myBigDecimal = new BigDecimal(10);
+        myBigDecimal = new BigDecimal("10"); 
+        myBigDecimal = BigDecimal.valueOf(10);
+        myBigDecimal = BigDecimal.TEN; // BigDecimal.ZERO or BigDecimal.ONE or BigDecimal.TWO or BigDecimal.TEN
+        System.out.println("myBigDecimal: " + myBigDecimal);
+
+        BigInteger myBigInteger = new BigInteger("10"); // BigInteger.valueOf(12);
+        myBigInteger = BigInteger.valueOf(10);
+        System.out.println("myBigInteger: " + myBigInteger);
+
+        System.out.println("\n");
     }
 }
