@@ -10,7 +10,7 @@ public class Java_1 {
         System.out.println("A primitive type always has a value, while non-primitive types can be null.");
         System.out.println("A primitive type starts with a lowercase letter, while non-primitive types starts with an uppercase letter.");
         System.out.println("Primitives are much faster and use less memory");
-        System.out.println("\n");
+        System.out.println("\nJAVA - primitive data types in Java");
         
             // 1 byte / -128 to 127
         byte myByte = 12;
