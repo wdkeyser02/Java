@@ -75,5 +75,11 @@ public class Java_1 {
         System.out.println("Time Long: " + LongTime + " ms");
         System.out.println("\n\n");
 
+        int intTemp = 0;
+        //intTemp.
+
+        Integer integerTemp = 0;
+        //integerTemp.
+
     }
 }

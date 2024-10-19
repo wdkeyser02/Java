@@ -3,8 +3,9 @@ public class Java_2 {
         
         System.out.println("JAVA - data types in Java.\n");
         
-            // 1 byte / -128 to 127
+            // -128 to 127
         Byte myByte = 12;
+        //myByte.
         System.out.println("myByte = " + myByte);
         System.out.println("Type: " + Byte.TYPE);
         System.out.println("Bytes: " + Byte.BYTES);
@@ -13,8 +14,9 @@ public class Java_2 {
         System.out.println("Min value: " + Byte.MIN_VALUE);
         System.out.println("\n");
 
-            // 2 bytes / -32.768 to 32.767
+            // -32.768 to 32.767
         Short myShort = 12;
+        //myShort.
         System.out.println("myShort = " + myShort);
         System.out.println("Type: " + Short.TYPE);
         System.out.println("Bytes: " + Short.BYTES);
@@ -23,8 +25,9 @@ public class Java_2 {
         System.out.println("Min value: " + Short.MIN_VALUE);
         System.out.println("\n");
 
-            // 4 bytes / -2.147.183.648 to 2.147.483.647
+            // -2.147.183.648 to 2.147.483.647
         Integer myInt = 12;
+        //myInt.
         System.out.println("myInt = " + myInt);
         System.out.println("Type: " + Integer.TYPE);
         System.out.println("Bytes: " + Integer.BYTES);
@@ -33,8 +36,9 @@ public class Java_2 {
         System.out.println("Min value: " + Integer.MIN_VALUE);
         System.out.println("\n");
         
-            // 8 bytes / -9.223.372.036.854.775.808 to 9.223.372.036.854.775.807
-        Long myLong = 12l;
+            // -9.223.372.036.854.775.808 to 9.223.372.036.854.775.807
+        Long myLong = 12l; // l or L
+        //myLong.
         System.out.println("myLong = " + myLong);
         System.out.println("Type: " + Long.TYPE);
         System.out.println("Bytes: " + Long.BYTES);
@@ -43,8 +47,9 @@ public class Java_2 {
         System.out.println("Min value: " + Long.MIN_VALUE);
         System.out.println("\n");
 
-            // 4 bytes / 6 decimal digits
-        Float myFloat = 12f;
+            // 6 decimal digits
+        Float myFloat = 12f; // f or F
+        //myFloat.
         System.out.println("myFloat = " + myFloat);
         System.out.println("Type: " + Float.TYPE);
         System.out.println("Bytes: " + Float.BYTES);
@@ -53,8 +58,9 @@ public class Java_2 {
         System.out.println("Min value: " + Float.MIN_VALUE);
         System.out.println("\n");
 
-            // 8 bytes / 15 decimal digits 
-        Double myDouble = 12d;
+            // 15 decimal digits 
+        Double myDouble = 12d; //d or D
+        //myDouble.
         System.out.println("myDouble = " + myDouble);
         System.out.println("Type: " + Double.TYPE);
         System.out.println("Bytes: " + Double.BYTES);
@@ -63,16 +69,18 @@ public class Java_2 {
         System.out.println("Min value: " + Double.MIN_VALUE);
         System.out.println("\n");
         
-            // 1 bit / true or false
-        Boolean myBoolean = true;
+            // true or false
+        Boolean myBoolean = true; // true or false
+        //myBoolean.
         System.out.println("myBoolean = " + myBoolean);
         System.out.println("Type: " + Boolean.TYPE);
         System.out.println("False value: " + Boolean.FALSE);
         System.out.println("True value: " + Boolean.TRUE);
         System.out.println("\n");
         
-            // 2 bytes / single character
+            // Characters
         String myString = "f";
+        //myString.
         System.out.println("myString = " + myString);
         System.out.println("\n");
         
