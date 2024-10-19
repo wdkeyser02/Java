@@ -5,6 +5,12 @@ public class Java_1 {
     public static void main(String[] args) {
         
         System.out.println("\n\nJAVA - primitive data types in Java");
+        System.out.println("Primitive types are predefined (already defined) in Java. Non-primitive types are created by the programmer and is not defined by Java (except for String).");
+        System.out.println("Non-primitive types can be used to call methods to perform certain operations, while primitive types cannot.");
+        System.out.println("A primitive type always has a value, while non-primitive types can be null.");
+        System.out.println("A primitive type starts with a lowercase letter, while non-primitive types starts with an uppercase letter.");
+        System.out.println("Primitives are much faster and use less memory");
+        System.out.println("\n");
         
             // 1 byte / -128 to 127
         byte myByte = 12;
