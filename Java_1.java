@@ -14,10 +14,12 @@ public class Java_1 {
         
             // 1 byte / -128 to 127
         byte myByte = 12;
+        // myByte.
         System.out.println("myByte = " + myByte);
 
             // 2 bytes / -32.768 to 32.767
         short myShort = 12;
+        // myShort.
         System.out.println("myShort = " + myShort);
 
             // 4 bytes / -2.147.183.648 to 2.147.483.647
@@ -44,9 +46,15 @@ public class Java_1 {
         char myChar = 65; // 65 or 'A'
         System.out.println("myChar = " + myChar + " - The ASCII code: " + (int)myChar);
 
+        // Speed tests.
+
+        System.out.println("\nSpeed test.");
+        
         int myTestInt = 0;
         Integer mytestInteger = 0;
         int COUNTER = 2147483647;
+
+        // Speed test int - Integer.
 
         long start = System.nanoTime();
         for(int x = 0; x < COUNTER; x++) {
@@ -63,8 +71,10 @@ public class Java_1 {
         System.out.println("Time Integer: " + integerTime + " ms");
         System.out.println("\n");
 
+        // Speed test long - Long.
+
         long myTestlong = 0;
-        Long mytestLong = 0L;
+        Long myTestLong = 0L;
 
         start = System.nanoTime();
         for(long x = 0L; x < COUNTER; x++) {
@@ -72,7 +82,7 @@ public class Java_1 {
         }
         stop = System.nanoTime();
         for(Long x = 0L; x < COUNTER; x++) {
-            mytestLong += x;
+            myTestLong += x;
         }
         end = System.nanoTime();
         long longTime = TimeUnit.NANOSECONDS.toMillis(stop - start);
