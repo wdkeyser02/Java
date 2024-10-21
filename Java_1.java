@@ -14,6 +14,7 @@ public class Java_1 {
         
             // 1 byte / -128 to 127
         byte myByte = 12;
+        // byte mybyte = new byte();
         // myByte.
         // byte myByteNull = null;
         System.out.println("myByte = " + myByte);
