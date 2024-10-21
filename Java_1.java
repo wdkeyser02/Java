@@ -15,6 +15,7 @@ public class Java_1 {
             // 1 byte / -128 to 127
         byte myByte = 12;
         // myByte.
+        // byte myByteNull = null;
         System.out.println("myByte = " + myByte);
 
             // 2 bytes / -32.768 to 32.767
@@ -49,7 +50,7 @@ public class Java_1 {
         // Speed tests.
 
         System.out.println("\nSpeed test.");
-        
+
         int myTestInt = 0;
         Integer mytestInteger = 0;
         int COUNTER = 2147483647;
