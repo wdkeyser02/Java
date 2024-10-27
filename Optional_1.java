@@ -7,13 +7,14 @@ public class Optional_1 {
         System.out.println("\nJava Optional.\n");
 
         Optional<String> myOptional = myRandomString();    // A container object which may or may not contain a non-null value. 
-                                                            // If a value is present, isPresent() returns true. 
-                                                            // If no value is present, the object is considered empty and isPresent() returns false.
+                                                           // If a value is present, isPresent() returns true. 
+                                                           // If no value is present, the object is considered empty and isPresent() returns false.
 
         
-        System.out.println(myOptional.orElse("No text!"));
+        System.out.println("get: " + myOptional.get()); // If a value is present, returns the value, otherwise throws NoSuchElementException.
+        System.out.println("orElse: " + myOptional.orElse("No text!")); // If a value is present, returns the value, otherwise returns other.
         
-        if (myOptional.isPresent()) {
+        if (myOptional.isPresent()) { // If a value is present, returns true, otherwise false.
             System.out.println("Optional is present!");            
         } else {
             System.out.println("Optional is not present!");   
