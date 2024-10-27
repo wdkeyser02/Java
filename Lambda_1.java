@@ -3,3 +3,8 @@ public class Lambda_1 {
         
     }
 }
+
+@FunctionalInterface
+interface InnerLambda_1 {
+    Integer operation(Integer x, Integer y);  
+}
