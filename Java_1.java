@@ -7,7 +7,7 @@ public class Java_1 {
 
         String myString = myRandomString();
         if (myString != null) {
-            System.out.println(myString);
+            System.out.println("String: " + myString + " Length: " + myString.length());
         } else {
             System.out.println("No text!");
         }
