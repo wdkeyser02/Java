@@ -6,7 +6,7 @@ public class Optional_1 {
         
         System.out.println("\nJava Optional.\n");
 
-        Optional<String> myOptional = myRandomBoolean();    // A container object which may or may not contain a non-null value. 
+        Optional<String> myOptional = myRandomString();    // A container object which may or may not contain a non-null value. 
                                                             // If a value is present, isPresent() returns true. 
                                                             // If no value is present, the object is considered empty and isPresent() returns false.
 
@@ -21,7 +21,7 @@ public class Optional_1 {
         System.out.println("\n");
     }
 
-    private static Optional<String> myRandomBoolean() {
+    private static Optional<String> myRandomString() {
         Random random = new Random();
         if (random.nextBoolean()) {
             return Optional.ofNullable("My Java Tutorials!");
