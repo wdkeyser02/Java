@@ -12,6 +12,7 @@ public class Optional_Start {
         Optional<Integer> numberNullablePresent = Optional.ofNullable(1);
         Optional<Integer> numberFindElementEmpty = findNumber(new Integer[]{1, 2, 3, 4, 5}, 6);
         Optional<Integer> numberFindElementPresent = findNumber(new Integer[]{1, 2, 3, 4, 5}, 1);
+        
         System.out.println(numberEmpty + " - Is Empty:" + numberEmpty.isEmpty() + " - Is Present:" + numberEmpty.isPresent());
         System.out.println(numberPresent + " - Is Empty:" + numberPresent.isEmpty() + " - Is Present:" + numberPresent.isPresent());
         System.out.println(numberNullableEmpty + " - Is Empty:" + numberNullableEmpty.isEmpty() + " - Is Present:" + numberNullableEmpty.isPresent());

@@ -1,33 +1,38 @@
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 public class Optional_Start_Object {
     public static void main(String[] args) {
-        // Optional A container object which may or may not contain a non-null value.
+        System.out.println("JAVA Optionals\n"); 
 
-        //  If no value is present, isPresent() will return false and get() will an empty Optional. 
-        System.out.println("Empty");
-        Optional<Person> personOptionalEmpty = Optional.empty();
-        System.out.println("isPresent: " + personOptionalEmpty.isPresent());
-        // System.out.println("get: " + personOptionalEmpty.get());
-        personOptionalEmpty.ifPresent(person -> System.out.println("ifPresent: " + person));
-
-        personOptionalEmpty.ifPresentOrElse(
-            person -> System.out.println("ifPresentOrElse: " + person),
-            () -> System.out.println("Person not found!")
-        );
-
-        System.out.println("\n");
-        //  If a value is present, isPresent() will return true and get() will return the value.
-        System.out.println("Present");
-        Optional<Person> personOptionalPresent = Optional.of(new Person(1, "Bill", "Gates", "password", 50));
-        System.out.println("isPresent: " + personOptionalPresent.isPresent());
-        System.out.println("get: " + personOptionalPresent.get());
-        personOptionalPresent.ifPresent(person -> System.out.println("ifPresent" + person));
-        personOptionalPresent.ifPresentOrElse(
-            person -> System.out.println("ifPresentOrElse: " + person),
-            () -> System.out.println("Person not found!")
-        );
+        Optional<Person> personEmpty = Optional.empty();
+        Optional<Person> personPresent = Optional.of(new Person(1, "Bill", "Gates", "password", 56));
+        Optional<Person> personNullableEmpty = Optional.ofNullable(null);
+        Optional<Person> personNullablePresent = Optional.ofNullable(new Person(1, "Bill", "Gates", "password", 56));
+        Optional<Person> personFindElementEmpty = findPerson(listOfPerson(), "");
+        Optional<Person> personFindElementPresent = findPerson(listOfPerson(), "Bill");
+        System.out.println(personEmpty + " - Is Empty:" + personEmpty.isEmpty() + " - Is Present:" + personEmpty.isPresent());
+        System.out.println(personPresent + " - Is Empty:" + personPresent.isEmpty() + " - Is Present:" + personPresent.isPresent());
+        System.out.println(personNullableEmpty + " - Is Empty:" + personNullableEmpty.isEmpty() + " - Is Present:" + personNullableEmpty.isPresent());
+        System.out.println(personNullablePresent + " - Is Empty:" + personNullablePresent.isEmpty() + " - Is Present:" + personNullablePresent.isPresent());
+        System.out.println(personFindElementEmpty + " - Is Empty:" + personFindElementEmpty.isEmpty() + " - Is Present:" + personFindElementEmpty.isPresent());
+        System.out.println(personFindElementPresent + " - Is Empty:" + personFindElementPresent.isEmpty() + " - Is Present:" + personFindElementPresent.isPresent());
+        System.out.println("\n"); 
     }
 
     public record Person(Integer id, String firstName, String lastName, String password, Integer age) {}
+
+    public static Optional<Person> findPerson(List<Person> listOfPerson, String name) {
+        return listOfPerson.stream().filter(person -> person.firstName == name).findFirst();
+    }
+
+    public static List<Person> listOfPerson() {
+        List<Person> listOfPerson = new ArrayList<>();
+        listOfPerson.add(new Person(1, "Bill", "Gates", "password", 56));
+        listOfPerson.add(new Person(2, "James", "Ford", "password", 50));
+        listOfPerson.add(new Person(3, "Robert", "Gray", "password", 45));
+        listOfPerson.add(new Person(4, "Charles", "Adams", "password", 68));
+        return listOfPerson;
+    }
 }
