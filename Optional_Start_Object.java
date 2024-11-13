@@ -12,12 +12,18 @@ public class Optional_Start_Object {
         Optional<Person> personNullablePresent = Optional.ofNullable(new Person(1, "Bill", "Gates", "password", 56));
         Optional<Person> personFindElementEmpty = findPerson(listOfPerson(), "");
         Optional<Person> personFindElementPresent = findPerson(listOfPerson(), "Bill");
-        System.out.println("Optional Empty: " + personEmpty + " - Is Empty:" + personEmpty.isEmpty() + " - Is Present:" + personEmpty.isPresent());
-        System.out.println("Optional Present: " + personPresent + " - Is Empty:" + personPresent.isEmpty() + " - Is Present:" + personPresent.isPresent());
-        System.out.println("Optional Nullable Empty: " + personNullableEmpty + " - Is Empty:" + personNullableEmpty.isEmpty() + " - Is Present:" + personNullableEmpty.isPresent());
-        System.out.println("Optional Nullable Present: " + personNullablePresent + " - Is Empty:" + personNullablePresent.isEmpty() + " - Is Present:" + personNullablePresent.isPresent());
-        System.out.println("Optional Find Element Empty: " + personFindElementEmpty + " - Is Empty:" + personFindElementEmpty.isEmpty() + " - Is Present:" + personFindElementEmpty.isPresent());
-        System.out.println("Optional Find Element Present: " + personFindElementPresent + " - Is Empty:" + personFindElementPresent.isEmpty() + " - Is Present:" + personFindElementPresent.isPresent());
+        System.out.println("Optional Empty: " + personEmpty + " - Is Empty:" + personEmpty.isEmpty() 
+            + " - Is Present:" + personEmpty.isPresent());
+        System.out.println("Optional Present: " + personPresent + " - Is Empty:" + personPresent.isEmpty() 
+            + " - Is Present:" + personPresent.isPresent());
+        System.out.println("Optional Nullable Empty: " + personNullableEmpty + " - Is Empty:" + personNullableEmpty.isEmpty() 
+            + " - Is Present:" + personNullableEmpty.isPresent());
+        System.out.println("Optional Nullable Present: " + personNullablePresent + " - Is Empty:" + personNullablePresent.isEmpty() 
+            + " - Is Present:" + personNullablePresent.isPresent());
+        System.out.println("Optional Find Element Empty: " + personFindElementEmpty + " - Is Empty:" + personFindElementEmpty.isEmpty() 
+            + " - Is Present:" + personFindElementEmpty.isPresent());
+        System.out.println("Optional Find Element Present: " + personFindElementPresent + " - Is Empty:" + personFindElementPresent.isEmpty() 
+            + " - Is Present:" + personFindElementPresent.isPresent());
         System.out.println("\n"); 
     }
 

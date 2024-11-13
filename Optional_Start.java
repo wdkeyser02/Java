@@ -13,12 +13,18 @@ public class Optional_Start {
         Optional<Integer> numberFindElementEmpty = findNumber(listOfNumbers(), 6);
         Optional<Integer> numberFindElementPresent = findNumber(listOfNumbers(), 1);
         
-        System.out.println("Optional Empty: " + numberEmpty + " - Is Empty:" + numberEmpty.isEmpty() + " - Is Present:" + numberEmpty.isPresent());
-        System.out.println("Optional Present: " + numberPresent + " - Is Empty:" + numberPresent.isEmpty() + " - Is Present:" + numberPresent.isPresent());
-        System.out.println("Optional Nullable Empty: " + numberNullableEmpty + " - Is Empty:" + numberNullableEmpty.isEmpty() + " - Is Present:" + numberNullableEmpty.isPresent());
-        System.out.println("Optional Nullable Present: " + numberNullablePresent + " - Is Empty:" + numberNullablePresent.isEmpty() + " - Is Present:" + numberNullablePresent.isPresent());
-        System.out.println("Optional Find Element Empty: " + numberFindElementEmpty + " - Is Empty:" + numberFindElementEmpty.isEmpty() + " - Is Present:" + numberFindElementEmpty.isPresent());
-        System.out.println("Optional Find Element Present: " + numberFindElementPresent + " - Is Empty:" + numberFindElementPresent.isEmpty() + " - Is Present:" + numberFindElementPresent.isPresent());
+        System.out.println("Optional Empty: " + numberEmpty + " - Is Empty:" + numberEmpty.isEmpty() 
+            + " - Is Present:" + numberEmpty.isPresent());
+        System.out.println("Optional Present: " + numberPresent + " - Is Empty:" + numberPresent.isEmpty() 
+            + " - Is Present:" + numberPresent.isPresent());
+        System.out.println("Optional Nullable Empty: " + numberNullableEmpty + " - Is Empty:" + numberNullableEmpty.isEmpty() 
+            + " - Is Present:" + numberNullableEmpty.isPresent());
+        System.out.println("Optional Nullable Present: " + numberNullablePresent + " - Is Empty:" + numberNullablePresent.isEmpty() 
+            + " - Is Present:" + numberNullablePresent.isPresent());
+        System.out.println("Optional Find Element Empty: " + numberFindElementEmpty + " - Is Empty:" + numberFindElementEmpty.isEmpty() 
+            + " - Is Present:" + numberFindElementEmpty.isPresent());
+        System.out.println("Optional Find Element Present: " + numberFindElementPresent + " - Is Empty:" + numberFindElementPresent.isEmpty() 
+            + " - Is Present:" + numberFindElementPresent.isPresent());
         System.out.println("\n"); 
 
     }
