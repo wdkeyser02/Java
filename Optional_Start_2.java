@@ -5,19 +5,19 @@ public class Optional_Start_2 {
         
         System.out.println("\nJAVA Optionals\n"); 
         
-        Optional<Integer> numberPresnet = Optional.of(1); // or Optional.ofNullable(1)
+        Optional<Integer> numberPresent = Optional.of(1); // or Optional.ofNullable(1)
 
-        System.out.println("numberPresnet: " + numberPresnet);
-        System.out.println("isPresent: " + numberPresnet.isPresent());
-        System.out.println("isEmpty: " + numberPresnet.isEmpty());
-        System.out.println("or: " + numberPresnet.or(() -> Optional.of(0)));
-        System.out.println("orElse: " + numberPresnet.orElse(0));
+        System.out.println("numberPresent: " + numberPresent);
+        System.out.println("isPresent: " + numberPresent.isPresent());
+        System.out.println("isEmpty: " + numberPresent.isEmpty());
+        System.out.println("or: " + numberPresent.or(() -> Optional.of(0)));
+        System.out.println("orElse: " + numberPresent.orElse(0));
         
-        System.out.println("get: " + numberPresnet.get());
-        System.out.println("orElseThrow: " + numberPresnet.orElseThrow());
+        System.out.println("get: " + numberPresent.get());
+        System.out.println("orElseThrow: " + numberPresent.orElseThrow());
 
-        numberPresnet.ifPresent((present) -> System.out.println("ifPresent: " + present));
-        numberPresnet.ifPresentOrElse(
+        numberPresent.ifPresent((present) -> System.out.println("ifPresent: " + present));
+        numberPresent.ifPresentOrElse(
             number -> System.out.println("ifPresentOrElse: " + number),
             () -> System.out.println("Optional is empty!")
         );
