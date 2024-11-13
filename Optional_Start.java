@@ -5,6 +5,7 @@ public class Optional_Start {
     public static void main(String[] args) {
         
         System.out.println("\nJAVA Optionals\n"); 
+        // Optional A container object which may or may not contain a non-null value.
 
         Optional<Integer> numberEmpty = Optional.empty();
         Optional<Integer> numberPresent = Optional.of(1);

@@ -20,6 +20,14 @@ public class Optional_1 {
             System.out.println("Optional is not present!");   
         }
         System.out.println("\n");
+
+        Optional<Integer> op = Optional.of(9455); 
+  
+        // print value 
+        System.out.println("Optional: " + op); 
+  
+        // orElse value 
+        System.out.println("Value by orElse" + "(100) method: " + op.orElse(100)); 
     }
 
     private static Optional<String> myRandomString() {
