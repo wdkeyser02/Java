@@ -7,8 +7,8 @@ public class Optional_1 {
         System.out.println("\nJava Optional.\n");
 
         Optional<String> myOptional = myRandomString();
-        myOptional.ifPresentOrElse(myString -> System.out.println("Optional is present: " + myString + " Length: " + myString.length())
-            , () -> System.out.println("Optional is not present!"));
+        myOptional.ifPresentOrElse(myString -> System.out.println("String: " + myString + " Length: " + myString.length())
+            , () -> System.out.println("No text!"));
         System.out.println("\n");
     }
 
