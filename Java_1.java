@@ -12,10 +12,10 @@ public class Java_1 {
 
         };
 
-        runSomthing(myRunnable);
+        runSomething(myRunnable);
     }
 
-    private static void runSomthing(Runnable runnable) {
+    private static void runSomething(Runnable runnable) {
         runnable.run();
     }
 }

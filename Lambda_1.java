@@ -4,10 +4,15 @@ public class Lambda_1 {
         System.out.println("\nJAVA Lambda\n");
         Runnable myRunnable = () -> System.out.println("I am a Runnable");
 
-        runSomthing(myRunnable);
+        // Runnable myRunnable = () -> {
+        //     System.out.println("I am a Runnable");
+        //     System.out.println("Second line code");
+        // };
+
+        runSomething(myRunnable);
     }
 
-    private static void runSomthing(Runnable runnable) {
+    private static void runSomething(Runnable runnable) {
         runnable.run();
     }
 }

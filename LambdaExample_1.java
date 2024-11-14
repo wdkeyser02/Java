@@ -12,9 +12,12 @@ public class LambdaExample_1 {
         operations.add((a, b) -> a / b);
         double value1 = 50.0;
         double value2 = 10.0;
-        for (var operation : operations) {
-            System.out.println(operation.calc(value1, value2));
-        }
+        
+        operations.forEach(operation -> System.out.println(operation.calc(value1, value2)));
+        // for (var operation : operations) {
+        //    System.out.println(operation.calc(value1, value2));
+        // }
+
     }
 
     @FunctionalInterface
