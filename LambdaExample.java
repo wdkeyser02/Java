@@ -5,9 +5,28 @@ public class LambdaExample {
         MyFunctionalInterface myFunctionalInterface = () -> System.out.println("Run MyMethod!");
         MyFunctionalInterface_1 myFunctionalInterface_1 = () -> "Run MyMethod!";
         MyFunctionalInterface_2 myFunctionalInterface_2 = a -> System.out.println("Run MyMethod: " + a);
+        
         MyFunctionalInterface_3 myFunctionalInterface_3 = (a, b) -> System.out.println("Run MyMethod: " + (a + b));
+        // MyFunctionalInterface_3 myFunctionalInterface_3 = (a, b) -> 
+        //                                                    {
+        //                                                        Integer sum = a + b;
+        //                                                        System.out.println("Run MyMethod: " + sum);
+        //                                                    };
+        
+        
         MyFunctionalInterface_4 myFunctionalInterface_4 = (a, b) -> a + b;
+        // MyFunctionalInterface_4 myFunctionalInterface_4 = (a, b) -> 
+        //                                                    {
+        //                                                        Integer sum = a + b;
+        //                                                        return sum;
+        //                                                    };
+
         MyFunctionalInterface_5 myFunctionalInterface_5 = (a, b, c) -> a + b + c;
+        // MyFunctionalInterface_5 myFunctionalInterface_5 = (a, b, c) -> 
+        //                                                    {
+        //                                                        Integer sum = a + b + c;
+        //                                                        return sum;
+        //                                                    };
         
  
         myFunctionalInterface.myMethod();
