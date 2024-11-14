@@ -4,7 +4,7 @@ public class LambdaExample {
         System.out.println("\nJAVA Lambda\n");
         MyFunctionalInterface myFunctionalInterface = () -> System.out.println("Run MyMethod!");
         MyFunctionalInterface_1 myFunctionalInterface_1 = () -> "Run MyMethod!";
-        MyFunctionalInterface_2 myFunctionalInterface_2 = (a) -> System.out.println("Run MyMethod: " + a);
+        MyFunctionalInterface_2 myFunctionalInterface_2 = a -> System.out.println("Run MyMethod: " + a);
         MyFunctionalInterface_3 myFunctionalInterface_3 = (a, b) -> System.out.println("Run MyMethod: " + (a + b));
         MyFunctionalInterface_4 myFunctionalInterface_4 = (a, b) -> a + b;
         MyFunctionalInterface_5 myFunctionalInterface_5 = (a, b, c) -> a + b + c;
