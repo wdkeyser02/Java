@@ -1,25 +1,51 @@
-import java.util.stream.IntStream;
+import java.util.concurrent.atomic.AtomicInteger;
 
-public class Thread_2 extends Thread {
-    private int threadNumber;
-    private int sleep;
+public class Thread_2 {
 
-    public Thread_2(int threadNumber, int sleep) {
-        this.threadNumber = threadNumber;
-        this.sleep = sleep;
+    private static final AtomicInteger counter = new AtomicInteger(0);
+    private static Thread threadIncrement;
+    private static Thread threadDecrement;
+
+    public static void main(String[] args) {
+        System.out.println("\nMain is Started!\n");
+        threadIncrement = new Thread(new WorkerIncrement());
+        threadDecrement = new Thread(new WorkerDecrement());
+        threadIncrement.start();
+        threadDecrement.start();
+        
     }
 
-    @Override
-    public void run() {
-        IntStream.range(0, 6)
-            .forEach(index -> {
-                System.out.println("Thread " + threadNumber + " Running: " +  index);
+    static class WorkerIncrement implements Runnable {
+        public void run() {
+            while (counter.get() < 10) {
                 try {
-                    Thread.sleep(sleep);
+                    counter.incrementAndGet();
+                    System.out.println("Counter Increment: " + counter);
+                    Thread.sleep(500);
                 } catch (InterruptedException e) {
-                    e.printStackTrace();
+                    System.out.println("Worker Increment stopped!");
+                    return;
                 }
-            });
-        System.out.println("Thread " + threadNumber + "  done!");    
+            }
+            System.out.println("Worker Increment done!");
+            threadDecrement.interrupt();
+        }
+    }
+
+    static class WorkerDecrement implements Runnable {
+        public void run() {
+            while (counter.get() >= 0) {
+                try {
+                    counter.decrementAndGet();
+                    System.out.println("Counter Decrement: " + counter);
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    System.out.println("Worker Decrement Stopped!");
+                    return; 
+                }
+            }
+            System.out.println("Worker Decrement done!");
+            threadIncrement.interrupt();   
+        }
     }
 }
