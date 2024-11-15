@@ -14,14 +14,14 @@ public class MultiThreading_1 {
         myThreadThread3.start();
         myThreadThread4.start();
         
-        //try {
-        //    myThreadThread1.join();
-        //    myThreadThread2.join();
-        //    myThreadThread3.join();
-        //    myThreadThread4.join();
-        //} catch (InterruptedException e) {
-        //    e.printStackTrace();
-        //}
+        try {
+            myThreadThread1.join();
+            myThreadThread2.join();
+            myThreadThread3.join();
+            myThreadThread4.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
 
         System.out.println("\nJava Threads continue with the rest of the code!\n");
     }
