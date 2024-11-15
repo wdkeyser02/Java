@@ -1,13 +1,13 @@
 import java.util.stream.IntStream;
 
-public class Thread_1 extends Thread {
-    
+public class Thread_2 extends Thread {
     private int threadNumber;
+    private int sleep;
 
-    public Thread_1(int threadNumber) {
+    public Thread_2(int threadNumber, int sleep) {
         this.threadNumber = threadNumber;
+        this.sleep = sleep;
     }
-
 
     @Override
     public void run() {
@@ -15,20 +15,11 @@ public class Thread_1 extends Thread {
             .forEach(index -> {
                 System.out.println("Thread " + threadNumber + " Running: " +  index);
                 try {
-                    Thread.sleep(1000);
+                    Thread.sleep(sleep);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
             });
-
-        //for (int index = 0; index <= 5; index++) {
-        //    System.out.println("Thread " + threadNumber + " Running: " +  index);
-        //    try {
-        //        Thread.sleep(1000);
-        //    } catch (InterruptedException e) {
-        //        e.printStackTrace();
-        //    }
-        //}
-        
+        System.out.println("Thread " + threadNumber + "  done!");    
     }
 }

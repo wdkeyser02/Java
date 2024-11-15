@@ -2,7 +2,7 @@ public class MultiThreading_2 implements Runnable {
 
     public static void main(String[] args) {
         
-        System.out.println("\nJava Threads\n");
+        System.out.println("\nJava Threads started!\n");
         MultiThreading_2 myThread = new MultiThreading_2();
 
         Thread myThreadThread1 = new Thread(myThread);
@@ -14,6 +14,17 @@ public class MultiThreading_2 implements Runnable {
         myThreadThread2.start();
         myThreadThread3.start();
         myThreadThread4.start();
+
+        try {
+            myThreadThread1.join();
+            myThreadThread2.join();
+            myThreadThread3.join();
+            myThreadThread4.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        System.out.println("\nJava Threads done!\n");
     }
 
     @Override
