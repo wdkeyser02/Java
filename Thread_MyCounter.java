@@ -7,8 +7,8 @@ public class Thread_MyCounter {
     private static final int numCounter = 100_000;
 
     public static void main(String[] args) {
-        for(int i = 0; i < numThreads; i++) {
-            Thread myThread = new Thread(new Task());
+        for(int i = 1; i <= numThreads; i++) {
+            Thread myThread = new Thread(new Task(), "Task-" + i);
             myThread.start();
         }
         try {
@@ -21,7 +21,7 @@ public class Thread_MyCounter {
     static class Task implements Runnable {
         @Override
         public void run() {
-            System.out.println("Task running");
+            System.out.println(Thread.currentThread().getName() + " running");
             try {
                 for(int i = 0; i < numCounter; i++) {
                     myCounter.increment();
@@ -29,7 +29,7 @@ public class Thread_MyCounter {
             } catch (Exception e) {
                 System.out.println("Exception is caught");
             }
-            System.out.println("Task is Done! " + myCounter.get());
+            System.out.println(Thread.currentThread().getName() + " is Done! " + myCounter.get());
         }
     }
 }
