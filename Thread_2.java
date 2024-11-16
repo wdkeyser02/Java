@@ -1,4 +1,4 @@
-public class Thread_1 {
+public class Thread_2 {
     public static void main(String[] args) {
         
         System.out.println("\nJAVA Threads\n");
@@ -13,8 +13,8 @@ public class Thread_1 {
             }
         };
 
-        Thread myThread1 = Thread.ofVirtual().start(myRunnable);
-        
+        Thread myThread1 = Thread.ofVirtual().unstarted(myRunnable);
+        myThread1.start();
         try {
             myThread1.join();
         } catch (InterruptedException e) {
