@@ -5,8 +5,9 @@ import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
+
 public class TaskScheduler {
-    private final PriorityQueue<Task> tasks;
+    private final PriorityQueue<MyTestTask> tasks;
     private final Thread[] threads;
     private final AtomicBoolean running;
     private final Lock lock;
@@ -27,7 +28,7 @@ public class TaskScheduler {
     public void schedule(Runnable task, long time) {
         lock.lock();
         try {
-            Task newTask = new Task(task, time, 0);
+            MyTestTask newTask = new MyTestTask(task, time, 0);
             tasks.add(newTask);
             newTaskAdded.signal();
         } finally {
@@ -38,7 +39,7 @@ public class TaskScheduler {
     public void scheduleAtFixedInterval(Runnable task,long interval) {
         lock.lock();
         try {
-            Task newTask = new Task(task, System.currentTimeMillis() + interval, interval);
+            MyTestTask newTask = new MyTestTask(task, System.currentTimeMillis() + interval, interval);
             tasks.add(newTask);
             newTaskAdded.signal();
         } finally {
@@ -75,7 +76,7 @@ public class TaskScheduler {
                         newTaskAdded.await();
                     }
 
-                    Task task = tasks.peek();
+                    MyTestTask task = tasks.peek();
                     long currentTime = System.currentTimeMillis();
                     long delay = Math.max(task.getExecutionTime() - currentTime, 0);
 
@@ -91,7 +92,7 @@ public class TaskScheduler {
                         tasks.poll();
                         task.getTask().run();
                         if (task.getInterval() > 0 && running.get()) {
-                            task = new Task(task.getTask(), currentTime + task.getInterval(), task.getInterval());
+                            task = new MyTestTask(task.getTask(), currentTime + task.getInterval(), task.getInterval());
                             tasks.add(task);
                         }
                     }
