@@ -15,7 +15,7 @@ public class Thread_1 {
     
     public static void main(String[] args) {
         System.out.println("\nJAVA Threads\n");
-        MyThread myThread = new MyThread("My Thread");
+        Thread myThread = new MyThread("My Thread");
         myThread.start();
         System.out.println("Thread: " + myThread.getName() + " - " + myThread.threadId());
     }
