@@ -5,4 +5,5 @@ public class Thread_12 {
         
         System.out.println("\nJAVA Threads\n");
     }
+
 }

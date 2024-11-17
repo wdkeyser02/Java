@@ -9,13 +9,13 @@ public class Thread_8 {
     public static void main(String[] args) {
         
         System.out.println("\nJAVA Threads\n");
-        //noconcurrency();
+        noconcurrency();
         structuredConcurrency();
-        //structuredConcurrencyException();
-        //structuredConcurrencySuccess();
-        //structuredConcurrencyDeadline();
-        //unstructuredConcurrency();
-        //unstructuredConcurrencyException();
+        structuredConcurrencyException();
+        structuredConcurrencySuccess();
+        structuredConcurrencyDeadline();
+        unstructuredConcurrency();
+        unstructuredConcurrencyException();
         
     }
 
