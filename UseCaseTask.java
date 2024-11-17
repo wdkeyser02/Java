@@ -1,10 +1,10 @@
-public class MyTestTask implements Comparable<MyTestTask> {
+public class UseCaseTask implements Comparable<UseCaseTask> {
     
     private final Runnable task;
     private final long interval;
     private final long executionTime;
 
-    public MyTestTask(Runnable task, long interval, long executionTime) {
+    public UseCaseTask(Runnable task, long interval, long executionTime) {
         this.task = task;
         this.interval = interval;
         this.executionTime = executionTime;
@@ -23,7 +23,7 @@ public class MyTestTask implements Comparable<MyTestTask> {
     }
 
     @Override
-    public int compareTo(MyTestTask task) {
+    public int compareTo(UseCaseTask task) {
         return Long.compare(this.executionTime, task.executionTime);
     }
 }
