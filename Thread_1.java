@@ -7,7 +7,6 @@ public class Thread_1 {
             System.out.println("MyThread running");
             System.out.println("MyThread finished");
         }
-
     }
     
     public static void main(String[] args) {
