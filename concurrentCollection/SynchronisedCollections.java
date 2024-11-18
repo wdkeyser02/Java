@@ -8,8 +8,8 @@ public class SynchronisedCollections {
         
         System.out.println("\nMain is Started!\n");
 
-        List<Integer> list = new ArrayList<>();
-        //List<Integer> list = Collections.synchronizedList(new ArrayList<>());
+        //List<Integer> list = new ArrayList<>();
+        List<Integer> list = Collections.synchronizedList(new ArrayList<>());
         Thread one = new Thread(() -> {
             for (int i = 0; i < 1000; i++) {
                 list.add(i);
