@@ -1,3 +1,4 @@
+package MyLoop;
 public class MyLoop {
     
     private boolean done = false;

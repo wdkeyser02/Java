@@ -1,3 +1,4 @@
+package basicMultithreading;
 public class ThreadPriorityExample {
     public static void main(String[] args) {
         

@@ -1,3 +1,4 @@
+package concurrentCollection;
 import java.util.concurrent.CountDownLatch;
 
 public class Restaurant {

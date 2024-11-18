@@ -1,3 +1,4 @@
+package basicMultithreading;
 public class ExtendsThreadExample {
     public static void main(String[] args) {
         

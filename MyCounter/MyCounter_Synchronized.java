@@ -1,3 +1,4 @@
+package MyCounter;
 public class MyCounter_Synchronized {
     private int counter = 0;
 

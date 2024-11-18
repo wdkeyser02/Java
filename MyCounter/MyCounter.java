@@ -1,3 +1,4 @@
+package MyCounter;
 public class MyCounter {
     
     private int counter = 0;

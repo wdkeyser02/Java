@@ -1,3 +1,4 @@
+package basicMultithreading;
 public class JoinThreadExample {
     public static void main(String[] args) throws InterruptedException {
         

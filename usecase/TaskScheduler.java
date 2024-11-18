@@ -1,3 +1,4 @@
+package usecase;
 import java.util.PriorityQueue;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicBoolean;
@@ -6,14 +7,14 @@ import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 
-public class UseCaseTaskScheduler {
-    private final PriorityQueue<UseCaseTask> tasks;
+public class TaskScheduler {
+    private final PriorityQueue<Task> tasks;
     private final Thread[] threads;
     private final AtomicBoolean running;
     private final Lock lock;
     private final Condition newTaskAdded;
 
-    public UseCaseTaskScheduler(int numThreads) {
+    public TaskScheduler(int numThreads) {
         this.tasks = new PriorityQueue<>();
         this.threads = new Thread[numThreads];
         this.running = new AtomicBoolean(true);
@@ -28,7 +29,7 @@ public class UseCaseTaskScheduler {
     public void schedule(Runnable task, long time) {
         lock.lock();
         try {
-            UseCaseTask newTask = new UseCaseTask(task, time, 0);
+            Task newTask = new Task(task, time, 0);
             tasks.add(newTask);
             newTaskAdded.signal();
         } finally {
@@ -39,7 +40,7 @@ public class UseCaseTaskScheduler {
     public void scheduleAtFixedInterval(Runnable task,long interval) {
         lock.lock();
         try {
-            UseCaseTask newTask = new UseCaseTask(task, System.currentTimeMillis() + interval, interval);
+            Task newTask = new Task(task, System.currentTimeMillis() + interval, interval);
             tasks.add(newTask);
             newTaskAdded.signal();
         } finally {
@@ -76,7 +77,7 @@ public class UseCaseTaskScheduler {
                         newTaskAdded.await();
                     }
 
-                    UseCaseTask task = tasks.peek();
+                    Task task = tasks.peek();
                     long currentTime = System.currentTimeMillis();
                     long delay = Math.max(task.getExecutionTime() - currentTime, 0);
 
@@ -92,7 +93,7 @@ public class UseCaseTaskScheduler {
                         tasks.poll();
                         task.getTask().run();
                         if (task.getInterval() > 0 && running.get()) {
-                            task = new UseCaseTask(task.getTask(), currentTime + task.getInterval(), task.getInterval());
+                            task = new Task(task.getTask(), currentTime + task.getInterval(), task.getInterval());
                             tasks.add(task);
                         }
                     }

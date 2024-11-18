@@ -1,3 +1,4 @@
+package MyLoop;
 public class Thread_MyLoop {
 
     private static final MyLoop myLoop = new MyLoop();

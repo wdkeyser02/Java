@@ -1,3 +1,4 @@
+package MyCounter;
 public class Thread_MyCounter {
 
     private static final MyCounter myCounter = new MyCounter();
