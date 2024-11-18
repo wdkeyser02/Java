@@ -1,8 +1,8 @@
 package MyLoop;
 public class MyLoop {
     
-    private boolean done = false;
-    //private volatile boolean done = false;
+    //private boolean done = false;
+    private volatile boolean done = false;
 
     public void loop() throws InterruptedException {
         for(int i = 0; i < 3; i++) {

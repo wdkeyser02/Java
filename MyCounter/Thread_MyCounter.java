@@ -1,9 +1,9 @@
 package MyCounter;
 public class Thread_MyCounter {
 
-    private static final MyCounter myCounter = new MyCounter();
+    //private static final MyCounter myCounter = new MyCounter();
     //private static final MyCounter_Synchronized myCounter = new MyCounter_Synchronized();
-    //private static final MyCounter_AtomicInteger myCounter = new MyCounter_AtomicInteger();
+    private static final MyCounter_AtomicInteger myCounter = new MyCounter_AtomicInteger();
     private static final int numThreads = 5;
     private static final int numCounter = 100_000;
 
