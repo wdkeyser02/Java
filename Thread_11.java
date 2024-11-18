@@ -9,7 +9,8 @@ public class Thread_11 {
             }
         };
         Thread myThread = new Thread(myRunnable);
-        //myThread.setDaemon(true);
+        //myThread.setDaemon(false);
+        myThread.setDaemon(true);
         myThread.start();
         sleep(5100);
         System.out.println("Main class is stopped!");

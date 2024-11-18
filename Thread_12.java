@@ -11,11 +11,11 @@ public class Thread_12 {
         Thread myThread = new Thread(myRunnable);
         myThread.setDaemon(true);
         myThread.start(); 
-        //try {
-        //    myThread.join();
-        //} catch (InterruptedException e) {
-        //    e.printStackTrace();
-        //}
+        try {
+            myThread.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         System.out.println("Main class is stopped!");
     }
 
