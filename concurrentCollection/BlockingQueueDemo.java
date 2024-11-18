@@ -7,7 +7,7 @@ public class BlockingQueueDemo {
     static final int QUEUE_CAPACITY = 10;
     static BlockingQueue<Integer> taskQueue = new ArrayBlockingQueue<>(QUEUE_CAPACITY);
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         
         System.out.println("\nMain is Started!\n");
         // Producer thread
@@ -49,6 +49,10 @@ public class BlockingQueueDemo {
         producerThread.start();
         consumerThread1.start();
         consumerThread2.start();
+
+        producerThread.join();
+        
+        System.out.println("All Tasks produced");
     }
 
     private static void processTask(int task, String consumerName) throws InterruptedException {
