@@ -2,6 +2,7 @@
 
 public class Thread_1 {
     public static void main(String[] args) {
+        
         System.out.println("\nMain is Started!\n");
         Thread.Builder myThreadBuilder = Thread.ofPlatform().name("myThread");
         
