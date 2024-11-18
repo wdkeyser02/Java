@@ -29,6 +29,9 @@ public class BlockingQueueDemo {
                 while (true) {
                     int task = taskQueue.take();
                     processTask(task, "Consumer 1");
+                    if (taskQueue.isEmpty()) {
+                        Thread.currentThread().interrupt();
+                    }
                 }
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
@@ -40,6 +43,9 @@ public class BlockingQueueDemo {
                 while (true) {
                     int task = taskQueue.take();
                     processTask(task, "Consumer 2");
+                    if (taskQueue.isEmpty()) {
+                        Thread.currentThread().interrupt();
+                    }
                 }
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
@@ -49,10 +55,6 @@ public class BlockingQueueDemo {
         producerThread.start();
         consumerThread1.start();
         consumerThread2.start();
-
-        producerThread.join();
-        
-        System.out.println("All Tasks produced");
     }
 
     private static void processTask(int task, String consumerName) throws InterruptedException {
