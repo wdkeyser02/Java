@@ -12,7 +12,7 @@ public class ScheduledExecutorDemo {
         executorService.scheduleAtFixedRate(new ProbeTask(), 1000, 2000, TimeUnit.MILLISECONDS);
 
         try {
-            if (!executorService.awaitTermination(5000, TimeUnit.MILLISECONDS)) {
+            if (!executorService.awaitTermination(10000, TimeUnit.MILLISECONDS)) {
                 executorService.shutdownNow();
             }
         } catch (InterruptedException e) {
