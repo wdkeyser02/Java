@@ -13,9 +13,9 @@ public class Thread_1 {
                 e.printStackTrace();
             }
             String name = threadLocal.get();
-            System.out.println("Thread: " + name);
+            System.out.println("Thread 1 - ThreadLocal: " + name);
             threadLocal.remove();
-            System.out.println("Thread: " + threadLocal.get());
+            System.out.println("Thread 1 - ThreadLocal: " + threadLocal.get());
         });
 
         Thread thread2 = new Thread(() -> {
@@ -26,9 +26,9 @@ public class Thread_1 {
                 e.printStackTrace();
             }
             String name = threadLocal.get();
-            System.out.println("Thread: " + name);
+            System.out.println("Thread 2 - ThreadLocal: " + name);
             threadLocal.remove();
-            System.out.println("Thread: " + threadLocal.get());
+            System.out.println("Thread 2 - ThreadLocal: " + threadLocal.get());
         });
 
         Thread thread3 = new Thread(() -> {
@@ -39,9 +39,9 @@ public class Thread_1 {
                 e.printStackTrace();
             }
             String name = threadLocal.get();
-            System.out.println("Thread: " + name);
+            System.out.println("Thread 3 - ThreadLocal: " + name);
             threadLocal.remove();
-            System.out.println("Thread: " + threadLocal.get());
+            System.out.println("Thread 3 - ThreadLocal: " + threadLocal.get());
         });
 
         thread1.start();
@@ -56,8 +56,8 @@ public class Thread_1 {
         }
 
         String name = threadLocal.get();
-        System.out.println("Thread: " + name);
+        System.out.println("Thread Main - ThreadLocal: " + name);
         threadLocal.remove();
-        System.out.println("Thread: " + threadLocal.get());
+        System.out.println("Thread Main - ThreadLocal: " + threadLocal.get());
     }
 }

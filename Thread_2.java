@@ -51,7 +51,7 @@ public class Thread_2 {
             } catch (InterruptedException e) {
             }
 
-            System.out.println("Parent Thread after child Threads are done: " + threadLocal.get() + " - " + inheritableThreadLocal.get() + " - " + atomicReference.get());
+            System.out.println("\nParent Thread after child Threads are done: " + threadLocal.get() + " - " + inheritableThreadLocal.get() + " - " + atomicReference.get());
         });
         parentThread.start();
         try {
