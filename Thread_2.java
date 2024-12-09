@@ -4,9 +4,9 @@ public class Thread_2 {
     public static void main(String[] args) {
         
         System.out.println("\nJava thread\n");
-        AtomicReference<String> atomicReference = new AtomicReference<>();
         ThreadLocal<String> threadLocal = new ThreadLocal<>();
         InheritableThreadLocal<String> inheritableThreadLocal =new InheritableThreadLocal<>();
+        AtomicReference<String> atomicReference = new AtomicReference<>();
         threadLocal.set("ThreadLocal from Main Class!");
         inheritableThreadLocal.set("InheritableThreadLocal from Main Class");
         atomicReference.set("AtomicReference from Main Class!");
